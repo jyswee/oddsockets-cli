@@ -1,0 +1,39 @@
+{
+  "name": "oddsockets",
+  "version": "1.0.0",
+  "description": "Agent-first CLI for OddSockets real-time messaging. Signup, publish, subscribe, presence — from the command line.",
+  "bin": {
+    "oddsockets": "bin/cli.js"
+  },
+  "main": "src/main.js",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "oddsockets",
+    "websocket",
+    "realtime",
+    "pubsub",
+    "channels",
+    "agent",
+    "cli",
+    "claude",
+    "cursor",
+    "cline",
+    "windsurf",
+    "aider",
+    "codex"
+  ],
+  "author": "Tyga.Cloud Ltd",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "bin/",
+    "dist/",
+    "README.md",
+    "LICENSE"
+  ]
+}

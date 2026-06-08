@@ -1,0 +1,10 @@
+src/
+scripts/
+.git/
+.github/
+node_modules/
+.oddsockets/
+test/
+docs/
+*.md
+!README.md
