@@ -1,16 +1,22 @@
-MIT License
+OddSockets CLI — Proprietary Software Licence
+Copyright (c) 2026 Tyga.Cloud Ltd. All rights reserved.
 
-Copyright (c) 2026 Tyga.Cloud Ltd
+GRANT OF LICENCE
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Tyga.Cloud Ltd ("Licensor") grants you a non-exclusive, non-transferable,
+revocable licence to install and use the OddSockets CLI software ("Software")
+solely for the purpose of interacting with the OddSockets platform, subject to
+the terms below.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+RESTRICTIONS
+
+You may NOT:
+  (a) Copy, modify, merge, or create derivative works of the Software;
+  (b) Reverse-engineer, decompile, disassemble, or otherwise attempt to derive
+      the source code of the Software;
+  (c) Redistribute, sublicence, lease, rent, or lend the Software;
+  (d) Remove or alter any proprietary notices, labels, or marks;
+  (e) Use the Software to compete with or replicate the OddSockets platform.
 
 DISCLAIMER OF WARRANTIES
 
@@ -27,12 +33,10 @@ IN NO EVENT SHALL TYGA.CLOUD LTD, ITS AFFILIATES, DIRECTORS, EMPLOYEES, OR
 AGENTS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR
 PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS, DATA, USE,
 GOODWILL, OR OTHER INTANGIBLE LOSSES, ARISING OUT OF OR IN CONNECTION WITH
-YOUR USE OF OR INABILITY TO USE THE SOFTWARE, WHETHER BASED ON WARRANTY,
-CONTRACT, TORT (INCLUDING NEGLIGENCE), OR ANY OTHER LEGAL THEORY, EVEN IF
-ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+YOUR USE OF OR INABILITY TO USE THE SOFTWARE.
 
 TYGA.CLOUD LTD'S AGGREGATE LIABILITY ARISING OUT OF OR RELATING TO THIS
-LICENSE OR THE SOFTWARE SHALL NOT EXCEED THE TOTAL FEES PAID BY YOU TO
+LICENCE OR THE SOFTWARE SHALL NOT EXCEED THE TOTAL FEES PAID BY YOU TO
 TYGA.CLOUD LTD FOR THE SOFTWARE DURING THE TWELVE (12) MONTHS IMMEDIATELY
 PRECEDING THE EVENT GIVING RISE TO THE CLAIM.
 
@@ -42,5 +46,16 @@ You agree to indemnify, defend, and hold harmless Tyga.Cloud Ltd, its
 affiliates, officers, directors, employees, and agents from and against any
 and all claims, liabilities, damages, losses, costs, and expenses (including
 reasonable legal fees) arising out of or in connection with: (a) your use of
-the Software; (b) your violation of this License; or (c) your violation of
+the Software; (b) your violation of this Licence; or (c) your violation of
 any applicable law, regulation, or third-party rights.
+
+TERMINATION
+
+This licence terminates automatically if you breach any term. Upon termination,
+you must cease all use and destroy all copies of the Software.
+
+GOVERNING LAW
+
+This licence is governed by the laws of England and Wales.
+
+Contact: legal@tyga.cloud

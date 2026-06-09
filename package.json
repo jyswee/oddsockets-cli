@@ -25,8 +25,13 @@
     "aider",
     "codex"
   ],
-  "author": "Tyga.Cloud Ltd",
-  "license": "MIT",
+  "author": "Joe Wee <joe@tyga.cloud>",
+  "license": "SEE LICENSE IN LICENSE",
+  "homepage": "https://oddsockets.ai",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jyswee/oddsockets-cli"
+  },
   "engines": {
     "node": ">=18"
   },
