@@ -96,6 +96,32 @@ oddsockets keys                             # list API keys
 - 10,000 messages/day, 10 channels
 - 24h message history
 
+## SDKs
+
+Prefer to build it into your app? OddSockets ships a native SDK for every major language and runtime — same real-time channels, pub/sub, and presence, idiomatic to each stack.
+
+| Language / Runtime | Repo | Highlights |
+|--------------------|------|------------|
+| Node.js | [oddsockets-nodejs-sdk](https://github.com/jyswee/oddsockets-nodejs-sdk) | Server-side, npm |
+| JavaScript | [oddsockets-javascript-sdk](https://github.com/jyswee/oddsockets-javascript-sdk) | Browser + Node.js |
+| TypeScript / Svelte | [oddsockets-svelte-sdk](https://github.com/jyswee/oddsockets-svelte-sdk) | Reactive stores |
+| React Native | [oddsockets-react-native-sdk](https://github.com/jyswee/oddsockets-react-native-sdk) | Mobile |
+| Flutter / Dart | [oddsockets-flutter-sdk](https://github.com/jyswee/oddsockets-flutter-sdk) | Cross-platform mobile |
+| Python | [oddsockets-python-sdk](https://github.com/jyswee/oddsockets-python-sdk) | AsyncIO |
+| Go | [oddsockets-go-sdk](https://github.com/jyswee/oddsockets-go-sdk) | Goroutine-safe |
+| Rust | [oddsockets-rust-sdk](https://github.com/jyswee/oddsockets-rust-sdk) | Tokio async |
+| Java | [oddsockets-java-sdk](https://github.com/jyswee/oddsockets-java-sdk) | Maven |
+| Kotlin | [oddsockets-kotlin-sdk](https://github.com/jyswee/oddsockets-kotlin-sdk) | Coroutines |
+| C# / .NET | [oddsockets-csharp-sdk](https://github.com/jyswee/oddsockets-csharp-sdk) | NuGet |
+| C++ | [oddsockets-cpp-sdk](https://github.com/jyswee/oddsockets-cpp-sdk) | C++17 |
+| C | [oddsockets-c-sdk](https://github.com/jyswee/oddsockets-c-sdk) | Embedded / IoT |
+| PHP | [oddsockets-php-sdk](https://github.com/jyswee/oddsockets-php-sdk) | Composer |
+| Ruby | [oddsockets-ruby-sdk](https://github.com/jyswee/oddsockets-ruby-sdk) | Gem |
+| Swift | [oddsockets-swift-sdk](https://github.com/jyswee/oddsockets-swift-sdk) | SPM + Combine |
+| Elixir | [oddsockets-elixir-sdk](https://github.com/jyswee/oddsockets-elixir-sdk) | GenServer / OTP |
+| Unity | [oddsockets-unity-sdk](https://github.com/jyswee/oddsockets-unity-sdk) | MonoBehaviour |
+| Unreal Engine | [oddsockets-unrealengine-sdk](https://github.com/jyswee/oddsockets-unrealengine-sdk) | UE5 |
+
 ## Links
 
 - [Documentation](https://docs.oddsockets.com)
