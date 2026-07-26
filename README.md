@@ -146,7 +146,7 @@ oddsockets keys                             # list API keys
 
 ## SDKs
 
-Prefer to build it into your app? OddSockets ships a native SDK for every major language and runtime — same real-time channels, pub/sub, and presence, idiomatic to each stack.
+Prefer to build it into your app? OddSockets ships a native SDK for every major language and runtime — same real-time channels, pub/sub, and presence, idiomatic to each stack. Each card links to its maintained repo; for a 60-second install + connect snippet in your language, see [`examples/`](examples/).
 
 <table>
 <tr>
