@@ -3,6 +3,7 @@
 [![npm version](https://img.shields.io/npm/v/oddsockets.svg)](https://www.npmjs.com/package/oddsockets)
 [![Real-time](https://img.shields.io/badge/pub%2Fsub-presence%20%2B%20history-f97316)](#see-it-live)
 [![Zero deps](https://img.shields.io/badge/dependencies-0-3fb950)](#install)
+[![MCP](https://img.shields.io/badge/MCP-12_tools-blue)](#mcp-server-remote)
 
 **Real-time messaging for coding agents — pub/sub, presence and history your agent provisions itself, from the command line.**
 
@@ -91,6 +92,17 @@ oddsockets subscribe my-channel             # live tail
 oddsockets presence my-channel              # who's online
 oddsockets keys                             # list API keys
 ```
+
+## MCP Server (remote)
+
+Prefer tools over a CLI? No install needed — point Claude Web, Claude Desktop, Cursor, Cline, Windsurf, Raycast, or any MCP client at our hosted server and your agent gets **12 native tools**: publish, history, presence, channels and API-key management.
+
+```
+URL:  https://mcp.oddsockets.ai/sse
+Auth: Authorization: Bearer YOUR_API_KEY
+```
+
+No key yet? Connect keyless and call `oddsockets_get_started`, then `oddsockets_signup` to self-provision an app and mint your own key — then reconnect with the `Bearer` header to unlock every tool. Same account, same channels as the CLI.
 
 ## Commands
 

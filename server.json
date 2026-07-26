@@ -1,0 +1,25 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+  "name": "io.github.jyswee/oddsockets-cli",
+  "description": "Agent-first real-time messaging: pub/sub, presence, history. Self-provision an app and get 12 tools over remote SSE — no dashboard, no keys to wire.",
+  "repository": {
+    "url": "https://github.com/jyswee/oddsockets-cli",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "websiteUrl": "https://oddsockets.com",
+  "remotes": [
+    {
+      "type": "sse",
+      "url": "https://mcp.oddsockets.ai/sse",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer token using your OddSockets API key: 'Bearer ak_...'. Optional: without one the server starts in onboarding mode and can self-provision an app via the oddsockets_signup tool.",
+          "isRequired": false,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
