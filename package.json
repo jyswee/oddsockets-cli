@@ -30,7 +30,7 @@
   "homepage": "https://oddsockets.ai",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jyswee/oddsockets-cli"
+    "url": "https://github.com/jyswee/oddsockets"
   },
   "engines": {
     "node": ">=18"

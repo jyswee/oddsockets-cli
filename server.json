@@ -1,9 +1,9 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.jyswee/oddsockets-cli",
+  "name": "io.github.jyswee/oddsockets",
   "description": "Agent-first real-time messaging: pub/sub, presence, history. 12 tools over SSE, self-provision.",
   "repository": {
-    "url": "https://github.com/jyswee/oddsockets-cli",
+    "url": "https://github.com/jyswee/oddsockets",
     "source": "github"
   },
   "version": "1.0.0",
