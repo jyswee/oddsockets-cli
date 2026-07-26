@@ -1,8 +1,31 @@
 # oddsockets
 
-Agent-first CLI for [OddSockets](https://oddsockets.com) real-time messaging.
+[![npm version](https://img.shields.io/npm/v/oddsockets.svg)](https://www.npmjs.com/package/oddsockets)
+[![Real-time](https://img.shields.io/badge/pub%2Fsub-presence%20%2B%20history-f97316)](#see-it-live)
+[![Zero deps](https://img.shields.io/badge/dependencies-0-3fb950)](#install)
 
-Signup, publish, subscribe, presence, API key management — all from the command line. Zero dependencies.
+**Real-time messaging for coding agents — pub/sub, presence and history your agent provisions itself, from the command line.**
+
+> **Prototype in one command. Ship the same channels to production — no rewrite.**
+
+Your agent can write the app but can't give it a real-time backbone without you stopping to wire up a messaging service. `oddsockets` is the CLI the agent runs itself: one install, and it signs up, mints its own key, and starts publishing and subscribing to live channels — the same channels that carry your production traffic. Zero dependencies.
+
+**Works with:** Claude Code · Cursor · Cline · Windsurf · Aider · Codex · any terminal
+
+[![oddsockets demo — signup to your first real-time message in 60 seconds](https://prodmedia.tyga.host/public/tyga.cloud/landing/oddsockets.com/demo/signup-demo.gif)](https://oddsockets.com/#demo)
+
+*Signup to your first real-time message in 60 seconds — [watch the full demo](https://oddsockets.com/#demo).*
+
+## See it live
+
+Each demo below is a **real CLI session** — a throwaway account, a real key, real messages over the live cluster — stitched to the **developer dashboard** showing that same traffic. Click any tab for the full-res video.
+
+| Signup → first message | Live pub/sub | Who's online | Agent integration |
+|---|---|---|---|
+| [![Signup to first real-time message](https://prodmedia.tyga.host/public/tyga.cloud/landing/oddsockets.com/demo/signup-demo.gif)](https://prodmedia.tyga.host/public/tyga.cloud/landing/oddsockets.com/demo/signup-demo.mp4) | [![Live pub/sub on one channel](https://prodmedia.tyga.host/public/tyga.cloud/landing/oddsockets.com/demo/pubsub-demo.gif)](https://prodmedia.tyga.host/public/tyga.cloud/landing/oddsockets.com/demo/pubsub-demo.mp4) | [![Presence — who is online now](https://prodmedia.tyga.host/public/tyga.cloud/landing/oddsockets.com/demo/presence-demo.gif)](https://prodmedia.tyga.host/public/tyga.cloud/landing/oddsockets.com/demo/presence-demo.mp4) | [![One-line agent integration + history](https://prodmedia.tyga.host/public/tyga.cloud/landing/oddsockets.com/demo/agent-demo.gif)](https://prodmedia.tyga.host/public/tyga.cloud/landing/oddsockets.com/demo/agent-demo.mp4) |
+| Fresh app, first message in seconds | One channel, two messages, instant | Live member list | `publish` + `history` in one line |
+
+*[Watch the full set on oddsockets.com →](https://oddsockets.com/#demo)*
 
 ## Install
 
@@ -24,6 +47,33 @@ oddsockets subscribe my-channel
 
 # 4. Check who's online
 oddsockets presence my-channel
+```
+
+## Pub/sub — one channel, real-time
+
+The core primitive: publish to a channel, subscribe to tail it live. Every subscriber gets every message the instant it lands — no polling, no queue to run.
+
+```bash
+oddsockets subscribe room-42 &                     # live tail in the background
+oddsockets publish room-42 "hello from the CLI"    # arrives on the tail instantly
+oddsockets publish room-42 --file payload.json     # publish structured data from a file
+```
+
+## Presence — who's online, right now
+
+Ask any channel who's connected. Presence is tracked server-side and updates in real time as clients join and leave.
+
+```bash
+oddsockets subscribe lobby &     # join the channel
+oddsockets presence lobby        # live member list
+```
+
+## History — replay what you missed
+
+Channels keep a rolling message history, so a client that connects late (or your agent after a context reset) can catch up.
+
+```bash
+oddsockets history agent-bus --limit 10
 ```
 
 ## Agent Integration
@@ -90,15 +140,47 @@ oddsockets keys                             # list API keys
 3. `.oddsockets/config.json` in project directory
 4. `~/.oddsockets/config.json` in home directory
 
-## Free Tier
+## Pricing
 
-- 100 MAU, 50 concurrent connections
-- 10,000 messages/day, 10 channels
-- 24h message history
+**7-day free trial on every plan.** Card required (secure Stripe checkout), nothing charged during the trial — cancel before it ends and you pay nothing. Agents and the CLI get a **48-hour keyless window** to prototype before a key is needed. Plans from $29/mo. [Details](https://oddsockets.com/#pricing).
 
 ## SDKs
 
 Prefer to build it into your app? OddSockets ships a native SDK for every major language and runtime — same real-time channels, pub/sub, and presence, idiomatic to each stack.
+
+<table>
+<tr>
+<td align="center" width="20%"><a href="https://github.com/jyswee/oddsockets-nodejs-sdk"><img src="https://prodmedia.tyga.host/public/tyga.cloud/landing/oddsockets.com/platform_nodejs.png" width="44" height="44" alt="Node.js"><br>Node.js</a></td>
+<td align="center" width="20%"><a href="https://github.com/jyswee/oddsockets-javascript-sdk"><img src="https://prodmedia.tyga.host/public/tyga.cloud/landing/oddsockets.com/platform_javascript.png" width="44" height="44" alt="JavaScript"><br>JavaScript</a></td>
+<td align="center" width="20%"><a href="https://github.com/jyswee/oddsockets-svelte-sdk"><img src="https://prodmedia.tyga.host/public/tyga.cloud/landing/oddsockets.com/platform_svelte.png" width="44" height="44" alt="Svelte"><br>Svelte</a></td>
+<td align="center" width="20%"><a href="https://github.com/jyswee/oddsockets-react-native-sdk"><img src="https://prodmedia.tyga.host/public/tyga.cloud/landing/oddsockets.com/platform_react.png" width="44" height="44" alt="React Native"><br>React Native</a></td>
+<td align="center" width="20%"><a href="https://github.com/jyswee/oddsockets-flutter-sdk"><img src="https://prodmedia.tyga.host/public/tyga.cloud/landing/oddsockets.com/platform_flutter.png" width="44" height="44" alt="Flutter"><br>Flutter</a></td>
+</tr>
+<tr>
+<td align="center"><a href="https://github.com/jyswee/oddsockets-python-sdk"><img src="https://prodmedia.tyga.host/public/tyga.cloud/landing/oddsockets.com/platform_python.png" width="44" height="44" alt="Python"><br>Python</a></td>
+<td align="center"><a href="https://github.com/jyswee/oddsockets-go-sdk"><img src="https://prodmedia.tyga.host/public/tyga.cloud/landing/oddsockets.com/platform_go.png" width="44" height="44" alt="Go"><br>Go</a></td>
+<td align="center"><a href="https://github.com/jyswee/oddsockets-rust-sdk"><img src="https://prodmedia.tyga.host/public/tyga.cloud/landing/oddsockets.com/platform_rust.png" width="44" height="44" alt="Rust"><br>Rust</a></td>
+<td align="center"><a href="https://github.com/jyswee/oddsockets-java-sdk"><img src="https://prodmedia.tyga.host/public/tyga.cloud/landing/oddsockets.com/platform_java.png" width="44" height="44" alt="Java"><br>Java</a></td>
+<td align="center"><a href="https://github.com/jyswee/oddsockets-kotlin-sdk"><img src="https://prodmedia.tyga.host/public/tyga.cloud/landing/oddsockets.com/platform_kotlin.png" width="44" height="44" alt="Kotlin"><br>Kotlin</a></td>
+</tr>
+<tr>
+<td align="center"><a href="https://github.com/jyswee/oddsockets-csharp-sdk"><img src="https://prodmedia.tyga.host/public/tyga.cloud/landing/oddsockets.com/platform_csharp.png" width="44" height="44" alt="C#"><br>C# / .NET</a></td>
+<td align="center"><a href="https://github.com/jyswee/oddsockets-cpp-sdk"><img src="https://prodmedia.tyga.host/public/tyga.cloud/landing/oddsockets.com/platform_cpp.png" width="44" height="44" alt="C++"><br>C++</a></td>
+<td align="center"><a href="https://github.com/jyswee/oddsockets-c-sdk"><img src="https://prodmedia.tyga.host/public/tyga.cloud/landing/oddsockets.com/platform_c.png" width="44" height="44" alt="C"><br>C</a></td>
+<td align="center"><a href="https://github.com/jyswee/oddsockets-php-sdk"><img src="https://prodmedia.tyga.host/public/tyga.cloud/landing/oddsockets.com/platform_php.png" width="44" height="44" alt="PHP"><br>PHP</a></td>
+<td align="center"><a href="https://github.com/jyswee/oddsockets-ruby-sdk"><img src="https://prodmedia.tyga.host/public/tyga.cloud/landing/oddsockets.com/platform_ruby.png" width="44" height="44" alt="Ruby"><br>Ruby</a></td>
+</tr>
+<tr>
+<td align="center"><a href="https://github.com/jyswee/oddsockets-swift-sdk"><img src="https://prodmedia.tyga.host/public/tyga.cloud/landing/oddsockets.com/platform_swift.png" width="44" height="44" alt="Swift"><br>Swift</a></td>
+<td align="center"><a href="https://github.com/jyswee/oddsockets-elixir-sdk"><img src="https://prodmedia.tyga.host/public/tyga.cloud/landing/oddsockets.com/platform_elixir.png" width="44" height="44" alt="Elixir"><br>Elixir</a></td>
+<td align="center"><a href="https://github.com/jyswee/oddsockets-unity-sdk"><img src="https://prodmedia.tyga.host/public/tyga.cloud/landing/oddsockets.com/platform_unity.png" width="44" height="44" alt="Unity"><br>Unity</a></td>
+<td align="center"><a href="https://github.com/jyswee/oddsockets-unrealengine-sdk"><img src="https://prodmedia.tyga.host/public/tyga.cloud/landing/oddsockets.com/platform_unrealengine.png" width="44" height="44" alt="Unreal Engine"><br>Unreal Engine</a></td>
+<td align="center"></td>
+</tr>
+</table>
+
+<details>
+<summary><strong>Full SDK list with highlights</strong></summary>
 
 | Language / Runtime | Repo | Highlights |
 |--------------------|------|------------|
@@ -121,6 +203,8 @@ Prefer to build it into your app? OddSockets ships a native SDK for every major 
 | Elixir | [oddsockets-elixir-sdk](https://github.com/jyswee/oddsockets-elixir-sdk) | GenServer / OTP |
 | Unity | [oddsockets-unity-sdk](https://github.com/jyswee/oddsockets-unity-sdk) | MonoBehaviour |
 | Unreal Engine | [oddsockets-unrealengine-sdk](https://github.com/jyswee/oddsockets-unrealengine-sdk) | UE5 |
+
+</details>
 
 ## Links
 
