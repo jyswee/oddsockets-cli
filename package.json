@@ -1,6 +1,6 @@
 {
   "name": "oddsockets",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Agent-first CLI for OddSockets real-time messaging. Signup, publish, subscribe, presence — from the command line.",
   "bin": {
     "oddsockets": "bin/cli.js"
