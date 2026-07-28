@@ -1,11 +1,11 @@
 {
   "name": "oddsockets",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Agent-first CLI for OddSockets real-time messaging. Signup, publish, subscribe, presence — from the command line.",
   "bin": {
     "oddsockets": "bin/cli.js"
   },
-  "main": "src/main.js",
+  "main": "dist/main.js",
   "scripts": {
     "build": "node scripts/build.js",
     "prepublishOnly": "npm run build"
