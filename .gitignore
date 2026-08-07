@@ -10,3 +10,6 @@ tests/
 *.tgz
 CLAUDE.md
 bin/
+
+# Local screenshot scratch
+tmp-screenshots/

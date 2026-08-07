@@ -138,11 +138,44 @@ No key yet? Connect keyless and call `oddsockets_get_started`, then `oddsockets_
 | `oddsockets key create "name"` | Create new key |
 | `oddsockets key revoke <id>` | Revoke key |
 
+### Admin (superadmin)
+Operator commands for running the whole platform from the CLI — fleet monitoring, tenant/key provisioning, session and security management. Credentials span three planes; save them once with `oddsockets admin login` (manager analytics key, worker dashboard basic-auth, and the tenant superadmin key). Every command supports `--json` for scripting, and the live monitors support `--watch`.
+
+| Command | Description |
+|---------|-------------|
+| `oddsockets admin login [--key K] [--tenant-key T] [--worker-url U --dashboard-pass P]` | Save credentials for any plane |
+| `oddsockets admin config` | Show configured planes (redacted) |
+| `oddsockets admin fleet [--watch] [--interval N]` | Fleet health + per-worker traffic table |
+| `oddsockets admin telemetry [--watch]` | Live fleet telemetry (no key needed) |
+| `oddsockets admin worker <id> [--watch]` | Per-worker deep metrics (dashboard plane) |
+| `oddsockets admin worker <id> <section>` | One worker dashboard panel (`all` for every panel) |
+| `oddsockets admin worker drain <id> --confirm` | Deregister/drain a worker from the LB |
+| `oddsockets admin worker redis-toggle <id> --confirm` | Flip a worker's redis adapter |
+| `oddsockets admin disk [--watch]` | Manager disk cards (summary/usage/io) |
+| `oddsockets admin cache [--watch]` | Manager apikey cache hit-rate stats |
+| `oddsockets admin analytics [mau\|dau] [<apiKeyId>] [--watch]` | MAU/DAU top tenants + per-key rollups |
+| `oddsockets admin analytics history <apiKeyId>` | 30-day MAU/DAU trend (dashboard charts) |
+| `oddsockets admin session stats [--watch]` | Sticky-session stats + per-worker counts |
+| `oddsockets admin session get <id>` | Inspect one session |
+| `oddsockets admin session reassign <id> --confirm` | Move a session off its worker |
+| `oddsockets admin session cleanup --confirm` | Purge stale sessions |
+| `oddsockets admin apikey mint <name> [--plan P]` | Provision a connectable tenant key |
+| `oddsockets admin users [--worker URL] [--status S]` | Live connected users (worker plane) |
+| `oddsockets admin security status` | Blocked + whitelisted IPs |
+| `oddsockets admin security whitelist <ip>` | Whitelist an IP (also unblocks it) |
+| `oddsockets admin security block <ip> --confirm` | Block an IP at the manager edge |
+| `oddsockets admin security clear --confirm` | Clear all blocked IPs |
+
+Worker dashboard sections (`admin worker <id> <section>`): `stats`, `channels`, `connections`, `telemetry`, `messages`, `recent`, `threads`, `dms`, `notifications`, `reactions`, `files`, `presence`, `receipts`, `disk`, `redis`, or `all`.
+
 ## Flags
 
 - `--json` — Machine-readable JSON output (every command)
 - `--key KEY` — Override API key for one command
 - `--local` — Use project-local config (`.oddsockets/`)
+- `--watch` — Live-refresh admin monitors (fleet/worker/session/analytics)
+- `--interval N` — Refresh interval in seconds for `--watch` (default 5)
+- `--confirm` — Required for destructive admin ops (drain, block, cleanup, …)
 - `--help` — Help
 
 ## Config Priority
