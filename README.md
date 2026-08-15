@@ -251,6 +251,12 @@ Prefer to build it into your app? OddSockets ships a native SDK for every major 
 
 </details>
 
+## Get Accredited
+
+Prove you can build and operate real-time features on OddSockets — channels, presence, pub/sub, delivery guarantees and production liveops — on the stack itself. Three tiers (**TCU / TCA / TCP**), certified through **tyga.games** and delivered on ClassaaS.
+
+[**Get accredited on tyga.games →**](https://tyga.games/accreditation)
+
 ## Links
 
 - [Documentation](https://docs.oddsockets.com)
